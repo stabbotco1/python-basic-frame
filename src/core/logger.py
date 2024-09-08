@@ -2,13 +2,15 @@ import os
 import logging
 import json
 from datetime import datetime
-# from core.core_utilities import CoreUtilities
 from src.core.core_utilities import CoreUtilities
 
 class JSONFormatter(logging.Formatter):
     def format(self, record):
+        # Format the time in ISO 8601 with 6 decimal places (microseconds)
+        utc_time = datetime.utcnow().isoformat(timespec='microseconds') + 'Z'
+        
         log_message = {
-            'time': datetime.utcnow().isoformat(),
+            'time': utc_time,
             'level': record.levelname,
             'message': record.getMessage()
         }
@@ -32,17 +34,13 @@ class SingletonLogger:
             log_directory = os.path.join(CoreUtilities.get_root_directory(), 'logs')
             os.makedirs(log_directory, exist_ok=True)
 
-
-            # # Get absolute path to the project root directory
-            # current_file_directory = os.path.dirname(os.path.abspath(__file__))
             project_root = CoreUtilities.get_root_directory()
-
             log_dir = os.path.join(project_root, 'logs')
 
-            print (f"SingletonLogger log_dir:....... {log_dir} ..............")
+            print(f"SingletonLogger log_dir:....... {log_dir} ..............")
 
             if not os.path.exists(log_dir):
-                print (" ...... making log_dir: " + log_dir)
+                print(" ...... making log_dir: " + log_dir)
                 os.makedirs(log_dir)
 
             # File handler with the log path at project root
