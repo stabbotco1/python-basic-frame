@@ -35,6 +35,7 @@ class SingletonLogger:
             os.makedirs(log_directory, exist_ok=True)
 
             project_root = CoreUtilities.get_root_directory()
+            print (f"PROJECT ROOT: {project_root}")
             log_dir = os.path.join(project_root, 'logs')
 
             print(f"SingletonLogger log_dir:....... {log_dir} ..............")
