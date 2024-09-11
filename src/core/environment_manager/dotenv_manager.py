@@ -7,28 +7,22 @@ ENV_PATH = '.env'
 class DotEnvManager:
     @staticmethod
     def load_env():
-        # Check if .env exists
+        # Check if .env exists; if not, create it from the default
         if not os.path.exists(ENV_PATH):
-            print(f"{ENV_PATH} not found. Creating from {DEFAULT_ENV_PATH}.")
             DotEnvManager.create_env_from_default()
-        
-        # Load the environment variables
+
+        # Load the environment variables from .env into the OS environment
         load_dotenv(ENV_PATH)
-        print(f"Loaded environment variables from {ENV_PATH}.")
 
     @staticmethod
     def create_env_from_default():
-        # Check if default env file exists
+        # Check if the default env file exists
         if not os.path.exists(DEFAULT_ENV_PATH):
             raise FileNotFoundError(f"Default environment file {DEFAULT_ENV_PATH} not found.")
         
-        # Copy default file to .env
-        with open(DEFAULT_ENV_PATH) as default_env_file, open(ENV_PATH, 'w') as env_file:
-            env_file.write(default_env_file.read())
+        # Copy the contents of .env.default to .env
+        with open(DEFAULT_ENV_PATH, 'r') as default_file:
+            with open(ENV_PATH, 'w') as env_file:
+                env_file.write(default_file.read())
+
         print(f"Created {ENV_PATH} from {DEFAULT_ENV_PATH}.")
-
-    @staticmethod
-    def set_env_variable(key, value):
-        set_key(ENV_PATH, key, value)
-        print(f"Set {key} in {ENV_PATH} to {value}.")
-

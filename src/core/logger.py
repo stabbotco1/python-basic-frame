@@ -4,6 +4,8 @@ import json
 from datetime import datetime
 from src.core.core_utilities import CoreUtilities
 
+clear_logs_on_startup = False
+
 class JSONFormatter(logging.Formatter):
     def format(self, record):
         # Format the time in ISO 8601 with 6 decimal places (microseconds)
@@ -25,9 +27,7 @@ class SingletonLogger:
         if SingletonLogger._logger is None:
 
             default_log_level = "debug"
-
             logger = logging.getLogger('app_logger')
-
             level = os.getenv('LOG_LEVEL', default_log_level).upper()
             logger.setLevel(level)
 
@@ -35,17 +35,19 @@ class SingletonLogger:
             os.makedirs(log_directory, exist_ok=True)
 
             project_root = CoreUtilities.get_root_directory()
-            print (f"PROJECT ROOT: {project_root}")
             log_dir = os.path.join(project_root, 'logs')
 
-            print(f"SingletonLogger log_dir:....... {log_dir} ..............")
-
             if not os.path.exists(log_dir):
-                print(" ...... making log_dir: " + log_dir)
                 os.makedirs(log_dir)
 
             # File handler with the log path at project root
             log_file = os.path.join(log_dir, f'app_{datetime.utcnow().strftime("%Y_%m_%d")}.log')
+
+            # Check if logs should be cleared on startup
+            if clear_logs_on_startup == True:
+                with open(log_file, 'w'):
+                    pass  # This will truncate the file
+
             file_handler = logging.FileHandler(log_file)
             file_handler.setFormatter(JSONFormatter())
 
