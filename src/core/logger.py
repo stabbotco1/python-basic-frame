@@ -4,8 +4,6 @@ import json
 from datetime import datetime
 from src.core.core_utilities import CoreUtilities
 
-clear_logs_on_startup = False
-
 class JSONFormatter(logging.Formatter):
     def format(self, record):
         # Format the time in ISO 8601 with 6 decimal places (microseconds)
@@ -26,10 +24,17 @@ class SingletonLogger:
 
         if SingletonLogger._logger is None:
 
-            default_log_level = "debug"
+            default_log_level = "INFO"  # Default to INFO level
             logger = logging.getLogger('app_logger')
             level = os.getenv('LOG_LEVEL', default_log_level).upper()
-            logger.setLevel(level)
+
+            try:
+                # Try to set the log level
+                logger.setLevel(level)
+            except ValueError:
+                # If invalid level, fall back to DEBUG
+                logger.setLevel(logging.DEBUG)
+                logger.debug(f"Invalid log level '{level}' provided, falling back to DEBUG.")
 
             log_directory = os.path.join(CoreUtilities.get_root_directory(), 'logs')
             os.makedirs(log_directory, exist_ok=True)
@@ -40,30 +45,81 @@ class SingletonLogger:
             if not os.path.exists(log_dir):
                 os.makedirs(log_dir)
 
-            # File handler with the log path at project root
             log_file = os.path.join(log_dir, f'app_{datetime.utcnow().strftime("%Y_%m_%d")}.log')
 
-            # Check if logs should be cleared on startup
-            if clear_logs_on_startup == True:
+            # Fetching clear_logs_on_startup from environment, defaulting to True
+            clear_logs_on_startup = os.getenv('CLEAR_LOGS_ON_STARTUP', 'true').lower() in ('true', '1', 't', 'yes', 'y')
+
+            # Improved test for truthy/falsy values
+            if clear_logs_on_startup:
                 with open(log_file, 'w'):
                     pass  # This will truncate the file
 
             file_handler = logging.FileHandler(log_file)
             file_handler.setFormatter(JSONFormatter())
 
-            # Create a StreamHandler to force real-time log flushing
             stream_handler = logging.StreamHandler()
             stream_handler.setFormatter(JSONFormatter())
 
-            # Add the file handler and stream handler to the logger
             logger.addHandler(file_handler)
             logger.addHandler(stream_handler)
 
-            # Ensure the logger flushes immediately
             file_handler.flush = lambda: None
             stream_handler.flush = lambda: None
 
-            # Force file handler to flush after every log entry
+            file_handler.flush()
+
+            SingletonLogger._logger = logger
+
+        return SingletonLogger._logger
+
+class SingletonLogger_old:
+    _logger = None
+
+    @staticmethod
+    
+    def get_logger_old():
+
+        if SingletonLogger._logger is None:
+
+            default_log_level = "INFO"  # Default to INFO level
+            logger = logging.getLogger('app_logger')
+            level = os.getenv('LOG_LEVEL', default_log_level).upper()
+
+            try:
+                # Try to set the log level
+                logger.setLevel(level)
+            except ValueError:
+                # If invalid level, fall back to INFO
+                logger.setLevel(logging.INFO)
+
+            log_directory = os.path.join(CoreUtilities.get_root_directory(), 'logs')
+            os.makedirs(log_directory, exist_ok=True)
+
+            project_root = CoreUtilities.get_root_directory()
+            log_dir = os.path.join(project_root, 'logs')
+
+            if not os.path.exists(log_dir):
+                os.makedirs(log_dir)
+
+            log_file = os.path.join(log_dir, f'app_{datetime.utcnow().strftime("%Y_%m_%d")}.log')
+
+            if clear_logs_on_startup == True:
+                with open(log_file, 'w'):
+                    pass
+
+            file_handler = logging.FileHandler(log_file)
+            file_handler.setFormatter(JSONFormatter())
+
+            stream_handler = logging.StreamHandler()
+            stream_handler.setFormatter(JSONFormatter())
+
+            logger.addHandler(file_handler)
+            logger.addHandler(stream_handler)
+
+            file_handler.flush = lambda: None
+            stream_handler.flush = lambda: None
+
             file_handler.flush()
 
             SingletonLogger._logger = logger

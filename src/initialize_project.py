@@ -1,4 +1,3 @@
-import os
 import sys
 from src.core.environment_manager.dotenv_manager import DotEnvManager
 from src.core.logger import SingletonLogger
@@ -7,7 +6,7 @@ def initialize_project():
     # Capture the environment value passed from the shell script (default to 'local')
     environment = sys.argv[1] if len(sys.argv) > 1 else "local"
     print ("")
-    print (f"initialize_project environment {initialize_project}")
+    print (f"initialize_project environment {environment}")
     
     # Handle different environments
     if environment == "local":
