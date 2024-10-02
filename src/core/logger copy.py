@@ -21,11 +21,10 @@ class SingletonLogger:
 
     @staticmethod
     def get_logger():
+
         if SingletonLogger._logger is None:
 
-            default_log_level = "INFO"
-            default_send_logs_to_console = False
-
+            default_log_level = "INFO" 
             logger = logging.getLogger('app_logger')
             level = os.getenv('LOG_LEVEL', default_log_level).upper()
 
@@ -51,6 +50,7 @@ class SingletonLogger:
             # Fetching clear_logs_on_startup from environment, defaulting to True
             clear_logs_on_startup = os.getenv('CLEAR_LOGS_ON_STARTUP', 'true').lower() in ('true', '1', 't', 'yes', 'y')
 
+            # Improved test for truthy/falsy values
             if clear_logs_on_startup:
                 with open(log_file, 'w'):
                     pass  # This will truncate the file
@@ -58,21 +58,15 @@ class SingletonLogger:
             file_handler = logging.FileHandler(log_file)
             file_handler.setFormatter(JSONFormatter())
 
+            stream_handler = logging.StreamHandler()
+            stream_handler.setFormatter(JSONFormatter())
+
             logger.addHandler(file_handler)
-
-            # Get the value from the environment or use the default
-            send_logs_to_console = os.getenv('SEND_LOGS_TO_CONSOLE', None)
-            if send_logs_to_console is None:
-                send_logs_to_console = default_send_logs_to_console
-            else:
-                send_logs_to_console = send_logs_to_console.lower() in ('true', '1', 't', 'yes', 'y')
-
-            if send_logs_to_console:
-                stream_handler = logging.StreamHandler()
-                stream_handler.setFormatter(JSONFormatter())
-                logger.addHandler(stream_handler)
+            logger.addHandler(stream_handler)
 
             file_handler.flush = lambda: None
+            stream_handler.flush = lambda: None
+
             file_handler.flush()
 
             SingletonLogger._logger = logger

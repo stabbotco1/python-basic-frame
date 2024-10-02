@@ -7,5 +7,5 @@ source scripts/venv_manager.sh
 ENVIRONMENT=${1:-local}
 
 # Run the initialization and menu system as a module within src
-python3 -m src.initialize_project $ENVIRONMENT
-python3 -m src.core.menu.main
+# python3 -m src.initialize_project $ENVIRONMENT
+python3 -m src.core.menu.main $ENVIRONMENT

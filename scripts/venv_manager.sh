@@ -31,7 +31,7 @@ source venv/bin/activate
 
 # Check if requirements.txt exists
 if [ -f "requirements.txt" ]; then
-    echo "Checking installed packages against requirements.txt..."
+    # echo "Checking installed packages against requirements.txt..."
 
     # Create a temp file to store missing dependencies
     missing_deps=$(mktemp)
@@ -43,8 +43,6 @@ if [ -f "requirements.txt" ]; then
     if [ -s "$missing_deps" ]; then
         echo "Missing packages found. Installing missing packages..."
         pip install -r "$missing_deps"
-    else
-        echo "All required packages are installed."
     fi
 
     # Clean up
@@ -55,7 +53,5 @@ else
     pip freeze > requirements.txt
 fi
 
-echo "Updating requirements.txt with current environment packages..."
+# echo "Updating requirements.txt with current environment packages..."
 pip freeze > requirements.txt
-
-echo "Virtual environment setup and package synchronization complete."

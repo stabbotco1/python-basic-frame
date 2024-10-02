@@ -4,6 +4,8 @@ import tty
 import termios
 import json
 
+from src.core.initialize_project import initialize_project
+
 from src.core.logger import SingletonLogger
 logger = SingletonLogger.get_logger()
 
@@ -54,6 +56,7 @@ def read_key():
 
 # A function to display the main menu
 def display_menu(menu):
+    logger.debug(menu)
     print("\nMain Menu (Press 'Esc' to exit):")
     for idx, item in enumerate(menu, 1):
         print(f"{idx}. {item['name']} - {item['description']}")
@@ -61,17 +64,20 @@ def display_menu(menu):
 # A function to display submenu for a category
 def display_submenu(commands):
     print("\nSubmenu (Press 'Esc' to go back):")
+    logger.debug(commands)
     for idx, command in enumerate(commands, 1):
         print(f"{idx}. {command['name']} - {command['description']}")
 
 # Function to handle the main menu logic
 def main_menu(menu_data):
+    initialize_project()
 
     logger.info ("INFO --- Starting application ...")
     logger.debug("Debug --- starting")
 
     while True:
         display_menu(menu_data['menu'])
+        logger.debug(menu_data['menu'])
         key = read_key()
 
         # Check if escape key is pressed to exit
@@ -94,6 +100,7 @@ def main_menu(menu_data):
 def submenu_menu(commands):
     while True:
         display_submenu(commands)
+        logger.debug(commands)
         key = read_key()
 
         # Check if escape key is pressed to go back to the main menu
@@ -105,6 +112,7 @@ def submenu_menu(commands):
             choice = int(key) - 1
             if 0 <= choice < len(commands):
                 selected_command = commands[choice]
+                logger.debug(selected_command)
                 # Execute the stub function based on the user's choice
                 script_name = os.path.basename(selected_command['script']).replace('.py', '')
                 globals()[script_name]()
