@@ -1,35 +1,55 @@
-# Title
+# python-basic-frame
 
+A basic python starting framework, bash based, with a menu and logging
+
+Understand, this has been built by an individual new to Python, and the 'pythony' way of doing things who is looking to share with others who getting started and might appreciate a starting project.
+
+This is a semi opinionated take and building a starting bash based app with a menu system and basic logging.
+
+Suggestions welcome.
+
+Enjoy
+
+## Repository
+
+[text](https://github.com/stabbotco1/python-basic-frame)
+
+## Latest project structure
+
+```bash
 .
+├── .env
+├── .env.default
 ├── .gitignore
-├── .vscode/
-│   └── settings.json
-├── logs/
-│   └── app_2024_09_07.log
+├── .vscode
+│   └── settings.json
+├── LICENSE
+├── README.md
+├── __init__.py
+├── demo_logger.py
+├── logs
+│   └── app_2024_10_10.log
+├── requirements.txt
 ├── run_menu.sh
-├── src/
-│   ├── core/
-│   │   ├── __init__.py
-│   │   ├── core_utilities.py  # New: Manages global references (e.g., ROOT_DIRECTORY)
-│   ├── environment_manager/
-│   │   ├── __init__.py
-│   │   └── environment_utilities.py
-│   ├── logger.py  # Updated: Integrates core_utilities for ROOT_DIRECTORY
-│   ├── menu/
-│   │   ├── __init__.py
-│   │   ├── commands/
-│   │   │   ├── environment_variables/
-│   │   │   │   ├── load_environment_variables_from_file.py
-│   │   │   │   ├── show_environment_variables_in_env_file.py
-│   │   │   │   └── show_loaded_environment_variables.py
-│   │   │   ├── logging_setup/
-│   │   │   │   ├── change_log_level.py
-│   │   │   │   ├── change_logging_directory.py
-│   │   │   │   └── send_sample_log_message.py
-│   │   └── main.py
-│   │   └── menu.json
-│   ├── utilities/
-│   │   ├── __init__.py
-│   │   └── file_system_utilities.py
-└── tests/
-    └── test_core_utilities.py  # Optional: For future testing
+├── scripts
+│   └── venv_manager.sh
+└── src
+    ├── __init__.py
+    └── core
+        ├── __init__.py
+        ├── core_utilities.py
+        ├── environment_manager
+        │   ├── __init__.py
+        │   ├── dotenv_manager.py
+        │   └── environment_utilities.py
+        ├── initialize_project.py
+        ├── logger copy.py
+        ├── logger.py
+        ├── menu
+        │   ├── main.py
+        │   └── menu.json
+        └── utilities
+            ├── __init__.py
+            └── file_system_utilities.py
+
+``` bash
