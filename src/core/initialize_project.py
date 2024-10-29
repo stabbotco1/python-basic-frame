@@ -8,14 +8,18 @@ def initialize_project(environment='local'):
     :param environment: The environment to initialize (default is 'local').
     """
     
-    # print(f"\nInitializing project in the '{environment}' environment")
-
-    # Handle different environments
     if environment == "local":
         # Load the .env file if it exists, or create it from .env.default
-        DotEnvManager.load_env()
+        added_or_changed_vars = DotEnvManager.load_env()
+
+        # Display added or changed environment variables
+        if added_or_changed_vars:
+            print("\nAdded or changed environment variables:")
+            for key, value in added_or_changed_vars.items():
+                print(f"{key} = {value}")
+        else:
+            print("No environment variables were added or changed.")
     else:
-        # Assuming that for non-local environments, variables are already injected into the OS
         print(f"Running in {environment} environment, assuming variables are already set")
     
     # Initialize the logger
@@ -26,5 +30,4 @@ def initialize_project(environment='local'):
     # Initialize other modules as necessary
 
 if __name__ == "__main__":
-    # Optional: You could set a default here or handle other logic if it's called directly from the CLI
-    pass
+    initialize_project()
