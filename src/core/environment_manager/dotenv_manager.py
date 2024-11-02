@@ -10,6 +10,9 @@ class DotEnvManager:
         """
         Loads the .env file into the environment and tracks changes.
         """
+
+        print("Loading env variables")
+
         # Capture the initial environment variables
         initial_env_vars = dict(os.environ)
 
@@ -22,6 +25,8 @@ class DotEnvManager:
 
         # Capture the new environment variables after loading
         new_env_vars = dict(os.environ)
+
+        print(f"new_env_vars: {new_env_vars}")
 
         # Find added or changed variables
         added_or_changed_vars = {

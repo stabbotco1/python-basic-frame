@@ -5,8 +5,10 @@ import termios
 import json
 
 from src.core.initialize_project import initialize_project
+initialize_project()
 
 from src.core.logger import SingletonLogger
+
 logger = SingletonLogger.get_logger()
 
 # Define the path to the menu JSON file
@@ -123,6 +125,23 @@ def submenu_menu(commands):
 
 # Main program execution
 def main():
+    print(os.getenv("main PRE: LOG_LEVEL", "Not Set"))
+
+    initialize_project()
+
+    logger = SingletonLogger.get_logger()
+
+    print(os.getenv("main POST: LOG_LEVEL", "Not Set"))
+
+
+    logger = SingletonLogger.get_logger()
+
+    print(" +++++++++++++ test logger")
+    logger.error("Test Error")
+    logger.info("Test info")
+    logger.debug("Test debug")
+
+
     logger.debug ("... Starting app main function")
     # Load menu from JSON file
     with open(MENU_JSON_PATH, 'r') as file:

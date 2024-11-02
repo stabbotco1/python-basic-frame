@@ -21,15 +21,20 @@ class SingletonLogger:
 
     @staticmethod
     def get_logger():
-        if SingletonLogger._logger is None:
 
+        print("getting logger")
+        
+        if SingletonLogger._logger is None:
+            print ("Initializing logger")
             default_log_level = "INFO"
             default_send_logs_to_console = False
 
             logger = logging.getLogger('app_logger')
             level = os.getenv('LOG_LEVEL', default_log_level).upper()
+            print(f"---- level {level}")
 
             try:
+                print(f"SingletonLogger: trying to set log level {level}")
                 # Try to set the log level
                 logger.setLevel(level)
             except ValueError:
@@ -76,5 +81,8 @@ class SingletonLogger:
             file_handler.flush()
 
             SingletonLogger._logger = logger
-
+            message = (f"Logger initialized with log level: {level}")
+            print(message)
+            logger.info(message)
+            logger.debug(message)
         return SingletonLogger._logger
