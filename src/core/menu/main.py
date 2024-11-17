@@ -8,7 +8,6 @@ from src.core.initialize_project import initialize_project
 initialize_project()
 
 from src.core.logger import SingletonLogger
-
 logger = SingletonLogger.get_logger()
 
 # Define the path to the menu JSON file
@@ -58,7 +57,6 @@ def read_key():
 
 # A function to display the main menu
 def display_menu(menu):
-    logger.debug(menu)
     print("\nMain Menu (Press 'Esc' to exit):")
     for idx, item in enumerate(menu, 1):
         print(f"{idx}. {item['name']} - {item['description']}")
@@ -72,14 +70,8 @@ def display_submenu(commands):
 
 # Function to handle the main menu logic
 def main_menu(menu_data):
-    initialize_project()
-
-    logger.info ("INFO --- Starting application ...")
-    logger.debug("Debug --- starting")
-
     while True:
         display_menu(menu_data['menu'])
-        logger.debug(menu_data['menu'])
         key = read_key()
 
         # Check if escape key is pressed to exit
@@ -92,6 +84,7 @@ def main_menu(menu_data):
             choice = int(key) - 1
             if 0 <= choice < len(menu_data['menu']):
                 selected_category = menu_data['menu'][choice]
+                logger.debug(f"selected_category: {selected_category}")
                 submenu_menu(selected_category['commands'])
             else:
                 print("Invalid selection, please try again.")
@@ -102,7 +95,7 @@ def main_menu(menu_data):
 def submenu_menu(commands):
     while True:
         display_submenu(commands)
-        logger.debug(commands)
+        logger.debug(f"submenu_menu: {commands}")
         key = read_key()
 
         # Check if escape key is pressed to go back to the main menu
@@ -125,29 +118,12 @@ def submenu_menu(commands):
 
 # Main program execution
 def main():
-    print(os.getenv("main PRE: LOG_LEVEL", "Not Set"))
+    logger.debug("Main started")
 
-    initialize_project()
-
-    logger = SingletonLogger.get_logger()
-
-    print(os.getenv("main POST: LOG_LEVEL", "Not Set"))
-
-
-    logger = SingletonLogger.get_logger()
-
-    print(" +++++++++++++ test logger")
-    logger.error("Test Error")
-    logger.info("Test info")
-    logger.debug("Test debug")
-
-
-    logger.debug ("... Starting app main function")
     # Load menu from JSON file
     with open(MENU_JSON_PATH, 'r') as file:
         menu_data = json.load(file)
 
-    # Start the main menu loop
     main_menu(menu_data)
 
 if __name__ == "__main__":
