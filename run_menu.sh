@@ -3,9 +3,8 @@
 # Activate virtual environment if necessary
 source scripts/venv_manager.sh
 
-# Define environment (use 'local' by default if none provided)
+# Set the environment variable
 ENVIRONMENT=${1:-local}
 
-# Run the initialization and menu system as a module within src
-# python3 -m src.initialize_project $ENVIRONMENT
+# invoke the menu main function
 python3 -m src.core.menu.main $ENVIRONMENT
