@@ -1,0 +1,34 @@
+Region,Service,Date,Cost
+NoRegion,AWS Skill Builder Individual,2024-12-01,29.0
+NoRegion,Tax,2024-12-01,1.31
+global,Amazon Route 53,2024-12-01,0.0
+global,Amazon Simple Storage Service,2024-11-11,0.0
+global,Amazon Simple Storage Service,2024-12-01,0.0
+global,AmazonCloudWatch,2024-11-11,0.0
+global,AmazonCloudWatch,2024-12-01,0.0
+us-east-1,AWS Cost Explorer,2024-12-01,0.0
+us-east-1,AWS Data Transfer,2024-11-11,-1.3326e-06
+us-east-1,AWS Data Transfer,2024-12-01,-6.668e-07
+us-east-1,Amazon Simple Storage Service,2024-11-11,1.3327e-06
+us-east-1,Amazon Simple Storage Service,2024-12-01,6.668e-07
+us-east-1,AmazonCloudWatch,2024-11-11,0.0
+us-east-1,AmazonCloudWatch,2024-12-01,0.0
+us-west-1,AmazonCloudWatch,2024-11-11,0.0
+us-west-1,AmazonCloudWatch,2024-12-01,0.0
+us-west-2,AWS Glue,2024-11-11,0.0
+us-west-2,AWS Glue,2024-12-01,0.0
+us-west-2,AWS Key Management Service,2024-11-11,0.0
+us-west-2,AWS Key Management Service,2024-12-01,0.0
+us-west-2,AWS Secrets Manager,2024-11-11,0.0
+us-west-2,AWS Secrets Manager,2024-12-01,0.0
+us-west-2,Amazon Relational Database Service,2024-11-11,-2.8e-08
+us-west-2,Amazon Relational Database Service,2024-12-01,-2e-09
+us-west-2,Amazon Simple Notification Service,2024-11-11,0.0
+us-west-2,Amazon Simple Notification Service,2024-12-01,0.0
+us-west-2,Amazon Simple Queue Service,2024-11-11,0.0
+us-west-2,Amazon Simple Queue Service,2024-12-01,0.0
+us-west-2,Amazon Simple Storage Service,2024-11-11,-0.0
+us-west-2,Amazon Simple Storage Service,2024-12-01,-0.0
+us-west-2,AmazonCloudWatch,2024-11-11,0.0
+us-west-2,AmazonCloudWatch,2024-12-01,0.0
+us-west-2,CloudWatch Events,2024-11-11,0.0

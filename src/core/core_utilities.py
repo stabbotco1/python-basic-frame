@@ -5,6 +5,7 @@ class CoreUtilities:
 
     @staticmethod
     def get_root_directory():
+        print(f"get_root_directory called")
         if CoreUtilities._root_directory is None:
             # Traverse upwards to the project root
             current_dir = os.path.abspath(os.path.dirname(__file__))

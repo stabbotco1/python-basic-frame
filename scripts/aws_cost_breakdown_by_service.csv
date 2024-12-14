@@ -1,0 +1,263 @@
+Date,Service,Cost
+2024-11-07,AWS Data Transfer,-7.02e-08
+2024-11-07,AWS Glue,0.0
+2024-11-07,AWS Key Management Service,0.0
+2024-11-07,AWS Secrets Manager,0.0
+2024-11-07,Amazon Relational Database Service,-1.4e-09
+2024-11-07,Amazon Simple Notification Service,0.0
+2024-11-07,Amazon Simple Queue Service,0.0
+2024-11-07,Amazon Simple Storage Service,7.02e-08
+2024-11-07,AmazonCloudWatch,0.0
+2024-11-08,AWS Data Transfer,-7.04e-08
+2024-11-08,AWS Glue,0.0
+2024-11-08,AWS Key Management Service,0.0
+2024-11-08,AWS Secrets Manager,0.0
+2024-11-08,Amazon Relational Database Service,-1.4e-09
+2024-11-08,Amazon Simple Notification Service,0.0
+2024-11-08,Amazon Simple Queue Service,0.0
+2024-11-08,Amazon Simple Storage Service,7.04e-08
+2024-11-08,AmazonCloudWatch,0.0
+2024-11-09,AWS Data Transfer,-6.98e-08
+2024-11-09,AWS Glue,0.0
+2024-11-09,AWS Key Management Service,0.0
+2024-11-09,AWS Secrets Manager,0.0
+2024-11-09,Amazon Relational Database Service,-1.4e-09
+2024-11-09,Amazon Simple Notification Service,0.0
+2024-11-09,Amazon Simple Queue Service,0.0
+2024-11-09,Amazon Simple Storage Service,6.98e-08
+2024-11-09,AmazonCloudWatch,0.0
+2024-11-10,AWS Data Transfer,-7e-08
+2024-11-10,AWS Glue,0.0
+2024-11-10,AWS Key Management Service,0.0
+2024-11-10,AWS Secrets Manager,0.0
+2024-11-10,Amazon Relational Database Service,-1.4e-09
+2024-11-10,Amazon Simple Notification Service,0.0
+2024-11-10,Amazon Simple Queue Service,0.0
+2024-11-10,Amazon Simple Storage Service,7e-08
+2024-11-10,AmazonCloudWatch,0.0
+2024-11-11,AWS Data Transfer,-7.02e-08
+2024-11-11,AWS Glue,0.0
+2024-11-11,AWS Key Management Service,0.0
+2024-11-11,AWS Secrets Manager,0.0
+2024-11-11,Amazon Relational Database Service,-1.4e-09
+2024-11-11,Amazon Simple Notification Service,0.0
+2024-11-11,Amazon Simple Queue Service,0.0
+2024-11-11,Amazon Simple Storage Service,7.02e-08
+2024-11-11,AmazonCloudWatch,0.0
+2024-11-12,AWS Data Transfer,-3.48e-08
+2024-11-12,AWS Glue,0.0
+2024-11-12,Amazon Relational Database Service,-1.4e-09
+2024-11-12,Amazon Simple Storage Service,3.48e-08
+2024-11-12,AmazonCloudWatch,0.0
+2024-11-13,AWS Data Transfer,-7.06e-08
+2024-11-13,AWS Glue,0.0
+2024-11-13,AWS Key Management Service,0.0
+2024-11-13,AWS Secrets Manager,0.0
+2024-11-13,Amazon Relational Database Service,-1.4e-09
+2024-11-13,Amazon Simple Notification Service,0.0
+2024-11-13,Amazon Simple Queue Service,0.0
+2024-11-13,Amazon Simple Storage Service,7.07e-08
+2024-11-13,AmazonCloudWatch,0.0
+2024-11-14,AWS Data Transfer,-7.02e-08
+2024-11-14,AWS Glue,0.0
+2024-11-14,AWS Key Management Service,0.0
+2024-11-14,AWS Secrets Manager,0.0
+2024-11-14,Amazon Relational Database Service,-1.4e-09
+2024-11-14,Amazon Simple Notification Service,0.0
+2024-11-14,Amazon Simple Queue Service,0.0
+2024-11-14,Amazon Simple Storage Service,7.02e-08
+2024-11-14,AmazonCloudWatch,0.0
+2024-11-15,AWS Data Transfer,-7e-08
+2024-11-15,AWS Glue,0.0
+2024-11-15,AWS Key Management Service,0.0
+2024-11-15,AWS Secrets Manager,0.0
+2024-11-15,Amazon Relational Database Service,-1.4e-09
+2024-11-15,Amazon Simple Notification Service,0.0
+2024-11-15,Amazon Simple Queue Service,0.0
+2024-11-15,Amazon Simple Storage Service,7e-08
+2024-11-15,AmazonCloudWatch,0.0
+2024-11-16,AWS Data Transfer,-7.04e-08
+2024-11-16,AWS Glue,0.0
+2024-11-16,AWS Key Management Service,0.0
+2024-11-16,AWS Secrets Manager,0.0
+2024-11-16,Amazon Relational Database Service,-1.4e-09
+2024-11-16,Amazon Simple Notification Service,0.0
+2024-11-16,Amazon Simple Queue Service,0.0
+2024-11-16,Amazon Simple Storage Service,7.04e-08
+2024-11-16,AmazonCloudWatch,0.0
+2024-11-17,AWS Data Transfer,-7.04e-08
+2024-11-17,AWS Glue,0.0
+2024-11-17,AWS Key Management Service,0.0
+2024-11-17,AWS Secrets Manager,0.0
+2024-11-17,Amazon Relational Database Service,-1.4e-09
+2024-11-17,Amazon Simple Notification Service,0.0
+2024-11-17,Amazon Simple Queue Service,0.0
+2024-11-17,Amazon Simple Storage Service,7.04e-08
+2024-11-17,AmazonCloudWatch,0.0
+2024-11-18,AWS Data Transfer,-7.02e-08
+2024-11-18,AWS Glue,0.0
+2024-11-18,AWS Key Management Service,0.0
+2024-11-18,AWS Secrets Manager,0.0
+2024-11-18,Amazon Relational Database Service,-1.4e-09
+2024-11-18,Amazon Simple Notification Service,0.0
+2024-11-18,Amazon Simple Queue Service,0.0
+2024-11-18,Amazon Simple Storage Service,7.02e-08
+2024-11-18,AmazonCloudWatch,0.0
+2024-11-19,AWS Data Transfer,-7e-08
+2024-11-19,AWS Glue,0.0
+2024-11-19,AWS Key Management Service,0.0
+2024-11-19,AWS Secrets Manager,0.0
+2024-11-19,Amazon Relational Database Service,-1.4e-09
+2024-11-19,Amazon Simple Notification Service,0.0
+2024-11-19,Amazon Simple Queue Service,0.0
+2024-11-19,Amazon Simple Storage Service,7e-08
+2024-11-19,AmazonCloudWatch,0.0
+2024-11-20,AWS Data Transfer,-6.98e-08
+2024-11-20,AWS Glue,0.0
+2024-11-20,AWS Key Management Service,0.0
+2024-11-20,AWS Secrets Manager,0.0
+2024-11-20,Amazon Relational Database Service,-1.4e-09
+2024-11-20,Amazon Simple Notification Service,0.0
+2024-11-20,Amazon Simple Queue Service,0.0
+2024-11-20,Amazon Simple Storage Service,6.98e-08
+2024-11-20,AmazonCloudWatch,0.0
+2024-11-21,AWS Data Transfer,-7e-08
+2024-11-21,AWS Glue,0.0
+2024-11-21,AWS Key Management Service,0.0
+2024-11-21,AWS Secrets Manager,0.0
+2024-11-21,Amazon Relational Database Service,-1.4e-09
+2024-11-21,Amazon Simple Notification Service,0.0
+2024-11-21,Amazon Simple Queue Service,0.0
+2024-11-21,Amazon Simple Storage Service,7e-08
+2024-11-21,AmazonCloudWatch,0.0
+2024-11-22,AWS Data Transfer,-7e-08
+2024-11-22,AWS Glue,0.0
+2024-11-22,AWS Key Management Service,0.0
+2024-11-22,AWS Secrets Manager,0.0
+2024-11-22,Amazon Relational Database Service,-1.4e-09
+2024-11-22,Amazon Simple Notification Service,0.0
+2024-11-22,Amazon Simple Queue Service,0.0
+2024-11-22,Amazon Simple Storage Service,7e-08
+2024-11-22,AmazonCloudWatch,0.0
+2024-11-23,AWS Data Transfer,-3.48e-08
+2024-11-23,AWS Glue,0.0
+2024-11-23,Amazon Relational Database Service,-1.4e-09
+2024-11-23,Amazon Simple Storage Service,3.48e-08
+2024-11-23,AmazonCloudWatch,0.0
+2024-11-24,AWS Data Transfer,-7.04e-08
+2024-11-24,AWS Glue,0.0
+2024-11-24,AWS Key Management Service,0.0
+2024-11-24,AWS Secrets Manager,0.0
+2024-11-24,Amazon Relational Database Service,-1.4e-09
+2024-11-24,Amazon Simple Notification Service,0.0
+2024-11-24,Amazon Simple Queue Service,0.0
+2024-11-24,Amazon Simple Storage Service,7.04e-08
+2024-11-24,AmazonCloudWatch,0.0
+2024-11-25,AWS Data Transfer,-7e-08
+2024-11-25,AWS Glue,0.0
+2024-11-25,AWS Key Management Service,0.0
+2024-11-25,AWS Secrets Manager,0.0
+2024-11-25,Amazon Relational Database Service,-1.4e-09
+2024-11-25,Amazon Simple Notification Service,0.0
+2024-11-25,Amazon Simple Queue Service,0.0
+2024-11-25,Amazon Simple Storage Service,7e-08
+2024-11-25,AmazonCloudWatch,0.0
+2024-11-25,CloudWatch Events,0.0
+2024-11-26,AWS Data Transfer,-7e-08
+2024-11-26,AWS Glue,0.0
+2024-11-26,AWS Key Management Service,0.0
+2024-11-26,AWS Secrets Manager,0.0
+2024-11-26,Amazon Relational Database Service,-1.4e-09
+2024-11-26,Amazon Simple Notification Service,0.0
+2024-11-26,Amazon Simple Queue Service,0.0
+2024-11-26,Amazon Simple Storage Service,7e-08
+2024-11-26,AmazonCloudWatch,0.0
+2024-11-27,AWS Data Transfer,-7.04e-08
+2024-11-27,AWS Glue,0.0
+2024-11-27,AWS Key Management Service,0.0
+2024-11-27,AWS Secrets Manager,0.0
+2024-11-27,Amazon Relational Database Service,-1.4e-09
+2024-11-27,Amazon Simple Notification Service,0.0
+2024-11-27,Amazon Simple Queue Service,0.0
+2024-11-27,Amazon Simple Storage Service,7.04e-08
+2024-11-27,AmazonCloudWatch,0.0
+2024-11-28,AWS Data Transfer,-7e-08
+2024-11-28,AWS Glue,0.0
+2024-11-28,AWS Key Management Service,0.0
+2024-11-28,AWS Secrets Manager,0.0
+2024-11-28,Amazon Relational Database Service,-1.4e-09
+2024-11-28,Amazon Simple Notification Service,0.0
+2024-11-28,Amazon Simple Queue Service,0.0
+2024-11-28,Amazon Simple Storage Service,7e-08
+2024-11-28,AmazonCloudWatch,0.0
+2024-11-29,AWS Data Transfer,-7.02e-08
+2024-11-29,AWS Glue,0.0
+2024-11-29,AWS Key Management Service,0.0
+2024-11-29,AWS Secrets Manager,0.0
+2024-11-29,Amazon Relational Database Service,-1.4e-09
+2024-11-29,Amazon Simple Notification Service,0.0
+2024-11-29,Amazon Simple Queue Service,0.0
+2024-11-29,Amazon Simple Storage Service,7.02e-08
+2024-11-29,AmazonCloudWatch,0.0
+2024-11-30,AWS Data Transfer,-7.02e-08
+2024-11-30,AWS Glue,0.0
+2024-11-30,AWS Key Management Service,0.0
+2024-11-30,AWS Secrets Manager,0.0
+2024-11-30,Amazon Relational Database Service,-1.4e-09
+2024-11-30,Amazon Simple Notification Service,0.0
+2024-11-30,Amazon Simple Queue Service,0.0
+2024-11-30,Amazon Simple Storage Service,7.02e-08
+2024-11-30,AmazonCloudWatch,0.0
+2024-12-01,AWS Data Transfer,-7.02e-08
+2024-12-01,AWS Glue,0.0
+2024-12-01,AWS Key Management Service,0.0
+2024-12-01,AWS Secrets Manager,0.0
+2024-12-01,AWS Skill Builder Individual,29.0
+2024-12-01,Amazon Relational Database Service,-2e-10
+2024-12-01,Amazon Route 53,0.0
+2024-12-01,Amazon Simple Notification Service,0.0
+2024-12-01,Amazon Simple Queue Service,0.0
+2024-12-01,Amazon Simple Storage Service,7.02e-08
+2024-12-01,AmazonCloudWatch,0.0
+2024-12-01,Tax,1.31
+2024-12-02,AWS Data Transfer,-7e-08
+2024-12-02,AWS Glue,0.0
+2024-12-02,AWS Key Management Service,0.0
+2024-12-02,AWS Secrets Manager,0.0
+2024-12-02,Amazon Relational Database Service,-2e-10
+2024-12-02,Amazon Simple Notification Service,0.0
+2024-12-02,Amazon Simple Queue Service,0.0
+2024-12-02,Amazon Simple Storage Service,7e-08
+2024-12-02,AmazonCloudWatch,0.0
+2024-12-03,AWS Data Transfer,-7.02e-08
+2024-12-03,AWS Glue,0.0
+2024-12-03,AWS Key Management Service,0.0
+2024-12-03,AWS Secrets Manager,0.0
+2024-12-03,Amazon Relational Database Service,-2e-10
+2024-12-03,Amazon Simple Notification Service,0.0
+2024-12-03,Amazon Simple Queue Service,0.0
+2024-12-03,Amazon Simple Storage Service,7.02e-08
+2024-12-03,AmazonCloudWatch,0.0
+2024-12-04,AWS Data Transfer,-7.02e-08
+2024-12-04,AWS Glue,0.0
+2024-12-04,AWS Key Management Service,0.0
+2024-12-04,AWS Secrets Manager,0.0
+2024-12-04,Amazon Relational Database Service,-2e-10
+2024-12-04,Amazon Simple Notification Service,0.0
+2024-12-04,Amazon Simple Queue Service,0.0
+2024-12-04,Amazon Simple Storage Service,7.02e-08
+2024-12-04,AmazonCloudWatch,0.0
+2024-12-05,AWS Data Transfer,-3.48e-08
+2024-12-05,AWS Glue,0.0
+2024-12-05,Amazon Relational Database Service,-2e-10
+2024-12-05,Amazon Simple Storage Service,3.48e-08
+2024-12-05,AmazonCloudWatch,0.0
+2024-12-06,AWS Data Transfer,-7e-08
+2024-12-06,AWS Glue,0.0
+2024-12-06,AWS Key Management Service,0.0
+2024-12-06,AWS Secrets Manager,0.0
+2024-12-06,Amazon Relational Database Service,-3e-10
+2024-12-06,Amazon Simple Notification Service,0.0
+2024-12-06,Amazon Simple Queue Service,0.0
+2024-12-06,Amazon Simple Storage Service,7e-08
+2024-12-06,AmazonCloudWatch,0.0
