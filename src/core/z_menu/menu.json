@@ -1,0 +1,102 @@
+{
+  "menu": [
+    {
+      "name": "Environment Variables",
+      "description": "Manage environment variables",
+      "commands": [
+        {
+          "name": "Load Environment Variables from File",
+          "script": "core/menu/commands/environment_variables/load_environment_variables_from_file.py",
+          "description": "Load environment variables from a specified .env file"
+        },
+        {
+          "name": "Show Environment Variables in .env File",
+          "script": "core/menu/commands/environment_variables/show_environment_variables_in_env_file.py",
+          "description": "Display the contents of the .env file"
+        },
+        {
+          "name": "Show Loaded Environment Variables",
+          "script": "core/menu/commands/environment_variables/show_loaded_environment_variables.py",
+          "description": "Show the environment variables currently loaded in the session"
+        }
+      ]
+    },
+    {
+      "name": "Logging Setup",
+      "description": "Manage logging configuration",
+      "commands": [
+        {
+          "name": "Change Logging Directory",
+          "script": "core/menu/commands/logging_setup/change_logging_directory.py",
+          "description": "Change the directory where logs are stored"
+        },
+        {
+          "name": "Change Log Level",
+          "script": "core/menu/commands/logging_setup/change_log_level.py",
+          "description": "Change the log level (e.g., DEBUG, INFO, ERROR)"
+        },
+        {
+          "name": "Send Sample Log Message",
+          "script": "core/menu/commands/logging_setup/send_sample_log_message.py",
+          "description": "Send a sample log message to verify logging setup"
+        }
+      ]
+    },
+    {
+      "name": "Venv Management",
+      "description": "Manage the virtual environment (venv)",
+      "commands": [
+        {
+          "name": "Show Venv State",
+          "script": "core/menu/commands/venv/show_venv_state.py",
+          "description": "Display the current state of the virtual environment"
+        },
+        {
+          "name": "Recreate Venv",
+          "script": "core/menu/commands/venv/recreate_venv.py",
+          "description": "Recreate the virtual environment"
+        },
+        {
+          "name": "Activate Venv",
+          "script": "core/menu/commands/venv/activate_venv.py",
+          "description": "Activate the local virtual environment"
+        },
+        {
+          "name": "Show Requirements.txt",
+          "script": "core/menu/commands/venv/show_requirements_txt.py",
+          "description": "Display the contents of the requirements.txt file"
+        },
+        {
+          "name": "Install Dependencies",
+          "script": "core/menu/commands/venv/install_dependencies.py",
+          "description": "Install all dependencies from requirements.txt"
+        },
+        {
+          "name": "Add Dependency",
+          "script": "core/menu/commands/venv/add_dependency.py",
+          "description": "Add a new dependency to requirements.txt and install it"
+        },
+        {
+          "name": "Remove Dependency",
+          "script": "core/menu/commands/venv/remove_dependency.py",
+          "description": "Remove a dependency from requirements.txt and uninstall it"
+        },
+        {
+          "name": "Upgrade Dependencies",
+          "script": "core/menu/commands/venv/upgrade_dependencies.py",
+          "description": "Upgrade all dependencies to their latest versions"
+        },
+        {
+          "name": "Freeze Requirements",
+          "script": "core/menu/commands/venv/freeze_requirements.py",
+          "description": "Generate a requirements.txt from the current environment"
+        },
+        {
+          "name": "Check for Conflicts",
+          "script": "core/menu/commands/venv/check_for_conflicts.py",
+          "description": "Check for conflicts or issues in requirements.txt"
+        }
+      ]
+    }
+  ]
+}
